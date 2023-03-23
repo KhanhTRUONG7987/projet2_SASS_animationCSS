@@ -1,0 +1,12 @@
+### VisualStudioCode ###
+.vscode 
+
+### Sass ###
+.sass-cache/
+*.css.map
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm 
