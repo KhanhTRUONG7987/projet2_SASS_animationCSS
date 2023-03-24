@@ -5,20 +5,20 @@
     padding: 28px 0px 37px 24px;
     background-color: $footer-bg-color;
     &__logo{
-        font-family: $logo-headings-font-family;
+        font-family: $logo-font-family;
         color: $logo-color-footer;
         font-size: 1rem ;
     }
     &__nav{
         color: $nav-color-footer;
-        font-family: $text-font-family;
+        font-family: $text-headings-font-family;
         font-style: regular;
         font-size: 0.8rem;
-        > ul{
+        &__lst{
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            > li{
+            &__item{
                 display: flex;
                 flex: 1;
             }

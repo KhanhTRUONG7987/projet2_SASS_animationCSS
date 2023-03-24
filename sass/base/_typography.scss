@@ -1,9 +1,9 @@
 // import Shrikhand Regular 400 & Roboto Light 300
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
 
 @import '../abstracts/variables';
 
 html {
-    font-family: $text-font-family;
+    font-family: $text-headings-font-family;
     font-style: $text-font-style;
 }

@@ -5,18 +5,18 @@ $breakpoints: (
 ) !default;
 
 //font
-$text-font-family: 'Roboto', sans-serif !default;
+$text-headings-font-family: 'Roboto', sans-serif !default;
 $text-font-style: light;
-$logo-headings-font-family: 'Shrikhand', cursive !default;
+$logo-font-family: 'Shrikhand', cursive !default;
 
 
 //colors
-$primary-color: #9356DC;
-$secondary-color-1: #FF79DA;
-$secondary-color-2: #99E2D0;
+$color-primary: #9356DC;
+$color-secondary-1: #FF79DA;
+$color-secondary-2: #99E2D0;
 
 $bg-color: #F7F7F7;
-$logo-color-header: #272727;
+$logo-color__header: #272727;
 $logo-color-footer:#fff;
 $headings-color: #7C7C7C;
 $footer-bg-color: #353535;
