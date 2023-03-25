@@ -1,0 +1,20 @@
+@mixin maxWidth($value){
+    @content;
+}
+
+@mixin minWidth($value){
+    @content;
+}
+
+@mixin bgc($bg-color:$bg-color){
+    background-color: $bg-color;
+}
+
+@mixin bgc-location($bg-color-location:$bg-color-location){
+    background-color: $bg-color-location;
+}
+
+@mixin size($width: 10rem, $height: $width * 0.7){
+    width: $width;
+    height: $height;
+}

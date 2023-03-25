@@ -1,0 +1,125 @@
+//variables
+@import "../abstracts/variables";
+
+//mixins
+@import "../abstracts/mixins";
+
+.pgResto{
+    > .pgResto-wrapper{
+        display: flex;
+        flex-direction: column;
+        > .pgResto-header{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            > .pgResto-header-icon{
+                align-self: center;
+                font-size: 1.5rem;
+            }
+            > .pgResto-header-logo{
+                align-self: center;
+                padding: 0rem 7rem 0rem 7rem;
+            }
+        }
+        > .pgResto-main{
+            display: flex;
+            flex-direction: column;
+            > .pgResto-menu{
+                padding-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                > .pgResto-title{
+                    > .pgResto-img{
+
+                    }
+                    > .pgResto-title-heading{
+
+                    }
+                    > .pgResto-title-icon{
+                        
+                    }
+                }
+                > .pgResto-menu-items{
+                    padding: 1rem 0rem 1rem 1rem;
+                    > .menu-entrees{
+                        > .menu-entrees-title{
+
+                        }
+                        > .menu-entrees-items{
+                            > .entree-item{
+                                > .entree-item-heading{
+
+                                }
+                                > .entree-item-content{
+
+                                }
+                                > .entree-item-price{
+
+                                }
+                                > .chosen{
+
+                                }
+                            }
+                        }
+                    }
+                    > .menu-plats{
+                        > .menu-plats-title{
+
+                        }
+                        > .menu-plats-items{
+                            > .plat-item{
+                                > .plat-item-heading{
+
+                                }
+                                > .plat-item-content{
+                                    
+                                }
+                                > .plat-item-price{
+
+                                }
+                                > .chosen{
+
+                                }
+                            }
+                        }
+                    }
+                    > .menu-desserts{
+                        > .menu-desserts-title{
+
+                        }
+                        > .menu-desserts-items{
+                            > .dessert-item{
+                                > .dessert-item-heading{
+
+                                }
+                                > .dessert-item-content{
+
+                                }
+                                > .dessert-item-price{
+
+                                }
+                                > .chosen{
+
+                                }
+                            }
+                        }
+                    }
+                }
+                > .pgResto-btn{
+                    color: $btn-text-color;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    width: 12rem;
+                    height: 3rem;
+                    background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.45);
+                    border-radius: 3rem 3rem 3rem 3rem;
+                    border: none;
+                    align-self: center;
+                }
+            }
+
+        }
+    }
+}

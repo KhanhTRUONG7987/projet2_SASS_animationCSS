@@ -46,8 +46,12 @@ table{
 }
 
 input{
-    -webkit-appearance: none;
+    // -webkit-appearance: none;
     border-radius: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #000000;
 }
 
 img{
