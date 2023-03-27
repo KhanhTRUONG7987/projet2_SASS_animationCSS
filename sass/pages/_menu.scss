@@ -25,101 +25,123 @@
             display: flex;
             flex-direction: column;
             > .pgResto-menu{
-                padding-bottom: 3rem;
-                display: flex;
-                flex-direction: column;
-                align-content: center;
                 > .pgResto-title{
+                    // margin: -8rem 0rem 0rem 0rem;
+                    @include bgc($bg-color-location);
+                    border-radius: 3rem 3rem 0rem 0rem;
                     > .pgResto-img{
-
+                        object-fit: cover;   
                     }
-                    > .pgResto-title-heading{
-
-                    }
-                    > .pgResto-title-icon{
-                        
-                    }
-                }
-                > .pgResto-menu-items{
-                    padding: 1rem 0rem 1rem 1rem;
-                    > .menu-entrees{
-                        > .menu-entrees-title{
-
-                        }
-                        > .menu-entrees-items{
-                            > .entree-item{
-                                > .entree-item-heading{
-
-                                }
-                                > .entree-item-content{
-
-                                }
-                                > .entree-item-price{
-
-                                }
-                                > .chosen{
-
-                                }
+                    > .menu{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3rem;
+                        align-content: center;
+                        padding: 1rem 1rem 3rem 1rem;   
+                        > .resto-heading{
+                           display: flex;
+                           flex-direction: row;
+                           gap: 8rem;
+                            > .pgResto-title-heading{
+                                font-family: $logo-font-family;
+                                font-size: 1.5rem;
+                                padding: 1rem 0rem 0rem 0rem;
+                            }
+                            > .pgResto-title-icon{
+                               align-self: center;  
+                               padding-top: 0.75rem; 
                             }
                         }
-                    }
-                    > .menu-plats{
-                        > .menu-plats-title{
-
-                        }
-                        > .menu-plats-items{
-                            > .plat-item{
-                                > .plat-item-heading{
-
-                                }
-                                > .plat-item-content{
-                                    
-                                }
-                                > .plat-item-price{
+                        > .pgResto-menu-items{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3rem;
+                            > .menu-element{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem; 
+                                > .menu-title{
+                                    font-weight: 300;
+                                    padding: 0rem 0rem 0.2rem 0rem;
+                                    border-bottom: solid $resto-tag-color 0.2rem;
 
                                 }
-                                > .chosen{
-
+                                > .menu-items{
+                                    display: grid;
+                                    grid-template-columns: repeat(1, 1fr);
+                                    gap: 1rem;
+                                    > .item{
+                                        display: flex;
+                                        flex-direction: row;
+                                        gap: 1rem;   
+                                        padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+                                        box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+                                        border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+                                        @include bgc();
+                                        > .plat-info{
+                                            flex: 1;
+                                            display: grid;
+                                            grid-template-columns: repeat(1, 1fr);
+                                            gap: 0.3rem;
+                                            > .item-heading{
+                                                font-family: $text-headings-font-family;
+                                                font-style: normal;
+                                                font-weight: 700;
+                                                font-size: 1rem;
+                                                line-height: 21px;  
+                                            }
+                                            > .item-content{
+                                                font-family: $text-headings-font-family;
+                                                font-style: normal;
+                                                font-weight: 300;
+                                                font-size: 0.9rem;
+                                                line-height: 19px;   
+                                            }
+                                        }
+                                        > .item-price{
+                                            margin-left: auto;
+                                            align-self: flex-end;
+                                            font-weight: 700;
+                                            font-size: 0.9rem;
+                                        }
+                                        > .chosen{
+                                            width: 4rem;
+                                            height: 4.4rem;
+                                            background: $resto-tag-color;
+                                            display: flex;
+                                            align-content: center;
+                                            align-items: center;
+                                            margin: -0.8rem -1rem -1rem auto;
+                                            z-index: 1;
+                                            border-radius: 0rem 1.2rem 1.2rem 0rem;
+                                            // box-sizing:border-box;
+                                            > .fa-solid {
+                                                color: $btn-text-color;
+                                                background: $resto-tag-color;
+                                                align-self: center; 
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+                                        }
+                                    }
                                 }
                             }
-                        }
-                    }
-                    > .menu-desserts{
-                        > .menu-desserts-title{
-
-                        }
-                        > .menu-desserts-items{
-                            > .dessert-item{
-                                > .dessert-item-heading{
-
-                                }
-                                > .dessert-item-content{
-
-                                }
-                                > .dessert-item-price{
-
-                                }
-                                > .chosen{
-
-                                }
-                            }
-                        }
-                    }
-                }
-                > .pgResto-btn{
-                    color: $btn-text-color;
-                    font-size: 0.8rem;
-                    font-weight: 700;
-                    width: 12rem;
-                    height: 3rem;
-                    background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
-                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.45);
-                    border-radius: 3rem 3rem 3rem 3rem;
-                    border: none;
-                    align-self: center;
+                        }    
+                        > .pgResto-btn{
+                            color: $btn-text-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            padding: 1rem 2rem 1rem 2rem;
+                            background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                            box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+                            border-radius: 3rem 3rem 3rem 3rem;
+                            border: none;
+                            align-self: center;
+                            text-align: center;
+                        } 
+                    } 
                 }
             }
-
         }
     }
 }
