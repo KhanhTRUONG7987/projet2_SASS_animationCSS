@@ -30,8 +30,9 @@
                     @include bgc($bg-color-location);
                     border-radius: 3rem 3rem 0rem 0rem;
                     > .pgResto-img{
+                        height: 60vh;
                         object-fit: cover;   
-                    }
+                    }   
                     > .menu{
                         display: flex;
                         flex-direction: column;
@@ -60,11 +61,17 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 1.5rem; 
-                                > .menu-title{
-                                    font-weight: 300;
-                                    padding: 0rem 0rem 0.2rem 0rem;
-                                    border-bottom: solid $resto-tag-color 0.2rem;
-
+                                > .menu-title-group{
+                                    > .menu-title{
+                                        font-weight: 300;
+                                        padding: 0rem 0rem 0.2rem 0rem;
+                                        border-bottom: solid $resto-tag-color 0.2rem;
+                                        > .menu-title-double{
+                                            margin-left: -0.8rem;
+                                            border-bottom: solid $bg-color-location 1rem;
+                                            color: transparent;
+                                        }
+                                    }
                                 }
                                 > .menu-items{
                                     display: grid;
