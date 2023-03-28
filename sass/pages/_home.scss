@@ -125,6 +125,9 @@
                     font-size: 1rem;
                     line-height: 21px;  
                 }
+                &:hover{
+                    @include hover(lighten($color-primary, 30%) );
+                }
             }
         }
     }
@@ -226,10 +229,14 @@
                             line-height: 19px;   
                         }
                     }
-                    i{
+                    > .heart{
                         margin-left: auto;
                         align-self: center;
                         // color: $btn-text-color;
+                        &:hover{
+                            @include hover($color-primary);
+                            cursor: pointer;
+                        }
                     }
                 }
             }

@@ -18,3 +18,7 @@
     width: $width;
     height: calc($width * 0.7);
 }
+
+@mixin hover($background-color){
+    background-color: $background-color;
+}
