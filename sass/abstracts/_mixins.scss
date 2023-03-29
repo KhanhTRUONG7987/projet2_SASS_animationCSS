@@ -14,7 +14,7 @@
     background-color: $bg-color-location;
 }
 
-@mixin size($width, $height: calc(0.9*$width)){
+@mixin size($width, $height: (0.9*$width)){
     width: $width;
     height: $height;
 }

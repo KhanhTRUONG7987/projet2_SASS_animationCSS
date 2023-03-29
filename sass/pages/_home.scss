@@ -72,7 +72,8 @@
                 align-self: center;
                 text-align: center;
                 &:hover{
-                    background-color: linear-gradient(145deg, lighten($color-secondary-1, 30%) 25%, lighten($color-primary, 30%) 75%);
+                    background: linear-gradient(145deg, lighten($color-secondary-1, 5%) 25%, lighten($color-primary, 5%) 75%);
+                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.65);
                 }
             }   
         }
@@ -172,11 +173,12 @@
                 // }
                 
                 > .resto-img{
-                    // aspect-ratio: 3/2;
+                    aspect-ratio: 3/2;
+                    width: 100%;
                     object-fit: cover;
                     border-radius: 1rem;
                     box-shadow: 0rem 1.8rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
-                    @include size($width: 100%);   
+                    // @include size($width: 100%);   
                 }
                 > .resto-tag{
                     width: 5rem;
@@ -237,14 +239,13 @@
                             line-height: 19px;   
                         }
                     }
-                    > .fa-heart{
+                    > .heart{
                         margin-left: auto;
                         align-self: center;
-                        // color: $btn-text-color;
                         &:hover{
                             @include hover($color-primary);
                             cursor: pointer;
-                        }
+                        } 
                     }
                 }
             }

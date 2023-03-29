@@ -148,6 +148,10 @@
                             border: none;
                             align-self: center;
                             text-align: center;
+                            &:hover{
+                                background: linear-gradient(145deg, lighten($color-secondary-1, 5%) 25%, lighten($color-primary, 5%) 75%);
+                                box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.65);
+                            }
                         } 
                     } 
                 }
