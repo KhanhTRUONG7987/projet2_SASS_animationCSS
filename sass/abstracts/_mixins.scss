@@ -14,9 +14,9 @@
     background-color: $bg-color-location;
 }
 
-@mixin size($width, $height){
+@mixin size($width, $height: calc(0.9*$width)){
     width: $width;
-    height: calc($width * 0.7);
+    height: $height;
 }
 
 @mixin hover($background-color){

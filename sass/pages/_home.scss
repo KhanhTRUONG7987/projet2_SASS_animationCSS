@@ -71,6 +71,9 @@
                 border: none;
                 align-self: center;
                 text-align: center;
+                &:hover{
+                    background-color: linear-gradient(145deg, lighten($color-secondary-1, 30%) 25%, lighten($color-primary, 30%) 75%);
+                }
             }   
         }
     }
@@ -96,7 +99,14 @@
                 border-radius: 1rem;
                 box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.08);
                 padding: 1.2rem 0rem 1.2rem 0rem;
+                &:hover{
+                    @include hover(lighten($color-primary, 30%));
+                    >.icon{
+                        color: $color-primary;
+                    }
+                }
                 > .item-bg{
+                    position: absolute;
                     text-align: center;
                     margin: 0rem 0rem 0rem -0.5rem;
                     padding: 0.1rem 0rem 0.1rem 0rem;
@@ -109,10 +119,12 @@
                         text-align: center;
                     }
                 }
-                i {
-                    font-size: 1rem;
+                > .icon {
+                    color: darken($bg-color-location, 40%);
+                    position: absolute;
+                    font-size: 1.2rem;
                     align-self: center;
-                    padding-left: 1.5rem;
+                    padding-left: 3rem;   
                 }
                 p {
                     align-self: center;
@@ -124,9 +136,6 @@
                     font-weight: 500;
                     font-size: 1rem;
                     line-height: 21px;  
-                }
-                &:hover{
-                    @include hover(lighten($color-primary, 30%) );
                 }
             }
         }
@@ -163,13 +172,11 @@
                 // }
                 
                 > .resto-img{
-                    // @include size();
-                    height: 60vh;
+                    aspect-ratio: 3/2;
                     object-fit: cover;
                     border-radius: 1rem;
                     box-shadow: 0rem 1.8rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
-                    // @include size(§width, §height);
-                    // object-fit: cover;
+                    @include size($width: 100%);   
                 }
                 > .resto-tag{
                     width: 5rem;
@@ -230,7 +237,7 @@
                             line-height: 19px;   
                         }
                     }
-                    > .heart{
+                    > .fa-heart{
                         margin-left: auto;
                         align-self: center;
                         // color: $btn-text-color;

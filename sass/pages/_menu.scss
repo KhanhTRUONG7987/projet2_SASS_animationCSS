@@ -9,10 +9,13 @@
         display: flex;
         flex-direction: column;
         > .pgResto-header{
-            display: flex;
-            flex-direction: row;
-            justify-content:center;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content:center;
             > .pgResto-header-icon{
+                position: absolute;
+                float: left;
+                margin-left: 2rem;
                 align-self: center;
                 font-size: 1.5rem;
             }
