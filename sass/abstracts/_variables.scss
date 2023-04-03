@@ -1,6 +1,6 @@
 //breakpoints map
 $breakpoints: (
-  'mobile': 768px,
+  'mobile': 992px,
   'tablet': 992px,
 ) !default;
 
@@ -24,3 +24,5 @@ $headings-color: #7C7C7C;
 $footer-bg-color: #353535;
 $nav-color-footer: #fff;
 $resto-tag-color: #99E2D0;   
+
+$color-gradient:linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);

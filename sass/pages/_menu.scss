@@ -9,19 +9,17 @@
         display: flex;
         flex-direction: column;
         > .pgResto-header{
-            // display: flex;
-            // flex-direction: row;
-            // justify-content:center;
             > .pgResto-header-icon{
-                position: absolute;
+                position: relative;
                 float: left;
-                margin-left: 2rem;
+                padding-left: 1.5rem;
                 align-self: center;
                 font-size: 1.5rem;
             }
             > .pgResto-header-logo{
                 align-self: center;
-                padding: 0rem 7rem 0rem 7rem;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         > .pgResto-main{
@@ -29,9 +27,6 @@
             flex-direction: column;
             > .pgResto-menu{
                 > .pgResto-title{
-                    // margin: -8rem 0rem 0rem 0rem;
-                    @include bgc($bg-color-location);
-                    border-radius: 3rem 3rem 0rem 0rem;
                     > .pgResto-img{
                         height: 60vh;
                         object-fit: cover;   
@@ -41,19 +36,38 @@
                         flex-direction: column;
                         gap: 3rem;
                         align-content: center;
-                        padding: 1rem 1rem 3rem 1rem;   
+                        padding: 1rem 1rem 3rem 1rem; 
+                        position: relative;
+                        margin: -8rem 0rem 0rem 0rem;
+                        border-radius: 3rem 3rem 0rem 0rem;
+                        @include bgc($bg-color-location); 
+                        @include minWidth($value: 992px){
+                            margin: -2rem 7rem 0rem 7rem; 
+                            > .resto-heading{
+                            display: flex;
+                            gap: 1rem;
+                            margin-left: auto;
+                            margin-right: auto;
+                            } 
+                            > .pgResto-menu-items{
+                                padding: 0rem 7rem 0rem 7rem;
+                            }
+                        }
                         > .resto-heading{
-                           display: flex;
-                           flex-direction: row;
-                           gap: 8rem;
+                        padding-top: 1.5rem;
                             > .pgResto-title-heading{
+                                position: relative;
+                                float: left;
                                 font-family: $logo-font-family;
                                 font-size: 1.5rem;
-                                padding: 1rem 0rem 0rem 0rem;
                             }
                             > .pgResto-title-icon{
+                               position: relative;
+                               float: right;
+                               font-size: 1.5rem;
+                               align-content: center;
                                align-self: center;  
-                               padding-top: 0.75rem; 
+                               padding: 0rem 2rem 0rem 0rem; 
                             }
                         }
                         > .pgResto-menu-items{

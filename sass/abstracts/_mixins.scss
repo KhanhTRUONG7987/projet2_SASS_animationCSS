@@ -1,9 +1,13 @@
 @mixin maxWidth($value){
-    @content;
+    @media screen and (max-width: $value) {
+        @content;
+    }
 }
 
 @mixin minWidth($value){
-    @content;
+    @media screen and (min-width: $value) {
+        @content;
+    }
 }
 
 @mixin bgc($bg-color:$bg-color){
@@ -23,4 +27,4 @@
     background-color: $background-color;
 }
 
-@mixin desktop {    @media (min-width: map-get($breakpoint, desktop)) {    @content;    }   }
+// @mixin desktop {    @media (min-width: map-get($breakpoint, desktop)) {    @content;    }   }

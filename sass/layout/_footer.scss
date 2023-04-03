@@ -1,15 +1,42 @@
+//variables
+@import "../abstracts/variables";
+
+//mixins
+@import "../abstracts/mixins";
+
 .footer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem 0rem 1.5rem 1rem;
     background-color: $footer-bg-color;
+    @include minWidth($value: 992px){
+        padding: 1.5rem 1rem 1.5rem 0rem;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3rem;
+        &__nav{
+            display: flex; 
+            flex-direction: column;
+            gap: 0.8rem;
+            &__lst{
+                display: flex;
+                flex-direction: row;
+                gap: 0.8rem;
+                &__item{
+                    display: flex;
+                    flex: 1;
+                } 
+            }
+        }
+    }
     &__logo{
         font-family: $logo-font-family;
         color: $logo-color-footer;
-        font-size: 1.2em ;
+        font-size: 1.2rem ;
     }
     &__nav{
+        display: flex;
         color: $nav-color-footer;
         font-family: $text-headings-font-family;
         font-style: regular;
@@ -21,12 +48,7 @@
             &__item{
                 display: flex;
                 flex: 1;
-            }
-            // @mixin minWidth(){
-            //     display: flex;
-            //     flex-direction: row;
-            //     gap: 1rem;
-            // }
+            } 
         }
     }
 }

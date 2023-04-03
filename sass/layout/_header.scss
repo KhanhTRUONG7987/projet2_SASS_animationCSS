@@ -1,3 +1,8 @@
+//variables
+@import "../abstracts/variables";
+
+//mixins
+@import "../abstracts/mixins";
 
 .header {
     display: flex;
@@ -9,5 +14,10 @@
         font-family: $logo-font-family;
         color: $logo-color__header;
         font-size: 2rem ;
+    }
+    @include minWidth($value: 992px){
+        &__logo {
+            font-size: 3rem ;
+        }
     }
 }

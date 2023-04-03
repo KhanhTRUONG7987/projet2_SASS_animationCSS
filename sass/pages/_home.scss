@@ -83,6 +83,9 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        @include minWidth($value: 992px){
+            padding: 1rem 4.5rem 2rem 4.5rem;
+        }
         > .functions-title{
             font-family: $text-headings-font-family;
             font-size: 24px;
@@ -93,6 +96,14 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            @include minWidth($value: 992px){
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                > .item{
+                    flex: 1;
+                }
+            }
             > .item{
                 @include bgc();
                 display: flex;
@@ -125,13 +136,12 @@
                     position: absolute;
                     font-size: 1.2rem;
                     align-self: center;
-                    padding-left: 3rem;   
+                    padding-left: 2rem;   
                 }
                 p {
                     align-self: center;
                     margin-left: auto;
                     margin-right: auto;
-                    // padding-left: 1.5rem;
                     font-family: $text-headings-font-family;
                     font-style: normal;
                     font-weight: 500;
@@ -147,6 +157,9 @@
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+        @include minWidth($value: 992px){
+            padding: 1rem 4.5rem 2rem 4.5rem;
+        }
         > .restaurants-title{
             font-family: $text-headings-font-family;
             font-size: 24px;
@@ -157,21 +170,14 @@
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 2.2rem;
-        
-            // @include minWidth($value: 992px){
-            //     display: grid;
-            //     grid-template-columns: repeat(4, 1fr);
-            //     gap: 2rem;
-            // }
+            @include minWidth($value: 992px){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+            }
             > .resto{
                 display: flex;
                 flex-direction: column;
-                // @include minWidth(768px){
-                //     display: flex;
-                //     flex-direction: row;
-                //     gap: 1rem;
-                // }
-                
                 > .resto-img{
                     aspect-ratio: 3/2;
                     width: 100%;
@@ -230,6 +236,9 @@
                             font-weight: 700;
                             font-size: 1.1rem;
                             line-height: 21px;   
+                            @include minWidth($value: 992px){
+                                font-size: 1rem;
+                            }
                         }
                         > .info-content{
                             font-family: $text-headings-font-family;
@@ -243,7 +252,7 @@
                         margin-left: auto;
                         align-self: center;
                         &:hover{
-                            @include hover($color-primary);
+                            background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
                             cursor: pointer;
                         } 
                     }
