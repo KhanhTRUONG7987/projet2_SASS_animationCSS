@@ -68,6 +68,24 @@
                                align-content: center;
                                align-self: center;  
                                padding: 0rem 2rem 0rem 0rem; 
+                               &::before{
+                                opacity: 1;
+                               }
+                               &:hover{
+                                cursor: pointer;
+                                transition: all .8s ease-in-out;
+                                -webkit-background-clip: text;
+                                font-weight: 900;
+                                background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                                -webkit-text-fill-color: transparent; 
+                                } 
+                                &::after{
+                                transition: all 1s fill;
+                                -webkit-background-clip: text;
+                                font-weight: 900;
+                                background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                                -webkit-text-fill-color: transparent; 
+                                } 
                             }
                         }
                         > .pgResto-menu-items{
@@ -102,6 +120,26 @@
                                         box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
                                         border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
                                         @include bgc();
+                                        &:hover{
+                                            > .chosen{
+                                                width: 4rem;
+                                                height: 4.4rem;
+                                                background: $resto-tag-color;
+                                                display: flex;
+                                                align-content: center;
+                                                align-items: center;
+                                                margin: -0.8rem -1rem -1rem auto;
+                                                z-index: 1;
+                                                border-radius: 0rem 1.2rem 1.2rem 0rem;
+                                                > .fa-solid {
+                                                    color: $btn-text-color;
+                                                    background: $resto-tag-color;
+                                                    align-self: center; 
+                                                    margin-left: auto;
+                                                    margin-right: auto;
+                                                }
+                                            }
+                                        }
                                         > .plat-info{
                                             flex: 1;
                                             display: grid;
@@ -128,25 +166,31 @@
                                             font-weight: 700;
                                             font-size: 0.9rem;
                                         }
-                                        > .chosen{
-                                            width: 4rem;
-                                            height: 4.4rem;
-                                            background: $resto-tag-color;
-                                            display: flex;
-                                            align-content: center;
-                                            align-items: center;
-                                            margin: -0.8rem -1rem -1rem auto;
-                                            z-index: 1;
-                                            border-radius: 0rem 1.2rem 1.2rem 0rem;
-                                            // box-sizing:border-box;
-                                            > .fa-solid {
-                                                color: $btn-text-color;
-                                                background: $resto-tag-color;
-                                                align-self: center; 
-                                                margin-left: auto;
-                                                margin-right: auto;
-                                            }
+                                        > .fa-regular{
+                                            color: transparent;
                                         }
+                                        > .fa-circle-check{
+                                            color: transparent;
+                                        }
+                                        // > .chosen{
+                                        //     width: 4rem;
+                                        //     height: 4.4rem;
+                                        //     background: $resto-tag-color;
+                                        //     display: flex;
+                                        //     align-content: center;
+                                        //     align-items: center;
+                                        //     margin: -0.8rem -1rem -1rem auto;
+                                        //     z-index: 1;
+                                        //     border-radius: 0rem 1.2rem 1.2rem 0rem;
+                                        //     // box-sizing:border-box;
+                                        //     > .fa-solid {
+                                        //         color: $btn-text-color;
+                                        //         background: $resto-tag-color;
+                                        //         align-self: center; 
+                                        //         margin-left: auto;
+                                        //         margin-right: auto;
+                                        //     }
+                                        // }
                                     }
                                 }
                             }
