@@ -16,17 +16,10 @@
         flex-direction: row-reverse;
         gap: 3rem;
         &__nav{
-            display: flex; 
-            flex-direction: column;
-            gap: 0.8rem;
             &__lst{
                 display: flex;
                 flex-direction: row;
                 gap: 0.8rem;
-                &__item{
-                    display: flex;
-                    flex: 1;
-                } 
             }
         }
     }
@@ -41,14 +34,10 @@
         font-family: $text-headings-font-family;
         font-style: regular;
         font-size: 1rem;
-        &__lst{
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            &__item{
-                display: flex;
-                flex: 1;
-            } 
+        &__lst{ 
+            > li{
+                padding-bottom: 0.7rem;
+            }
         }
     }
 }
