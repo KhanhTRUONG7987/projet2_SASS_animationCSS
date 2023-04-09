@@ -10,14 +10,14 @@
     align-items: center;
     justify-content: center;
     padding: 1rem 0rem 1rem 0rem;
+    margin-top: -12.8rem;
     &__logo {
         font-family: $logo-font-family;
         color: $logo-color__header;
         font-size: 2rem ;
-    }
-    @include minWidth($value: 992px){
-        &__logo {
+        @include minWidth($value: 992px){
             font-size: 3rem ;
         }
     }
+    
 }

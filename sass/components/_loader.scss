@@ -6,10 +6,10 @@
 
 .loader{
     margin: 0 auto;
-    border: 10px solid white;
+    border: 30px solid white;
     border-radius: 50%;
-    height: 10vmin;
-    width: 10vmin;
+    height: 30vmin;
+    width: 30vmin;
     border-left-color: $color-primary;
     border-right-color: $color-secondary-1; 
     animation: spin $loader-dur 1 linear;

@@ -5,7 +5,6 @@
 @import "../abstracts/mixins";
 
 .pgHome-wrapper{
-    margin-top: -55px;
     z-index: 1;
     animation: pageLoad ease-in-out $page-delay;
     .pgHome-main{
