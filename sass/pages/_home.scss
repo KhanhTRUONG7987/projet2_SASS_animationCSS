@@ -4,279 +4,292 @@
 //mixins
 @import "../abstracts/mixins";
 
-.pgHome-main{
-    display: flex;
-    flex-direction: column;
-    > .pgHome-banner{
-        @include bgc();
-        padding-bottom: 3rem;
+.pgHome-wrapper{
+    margin-top: -75px;
+    z-index: 1;
+    animation: pageLoad 1000ms $page-delay;
+    .pgHome-main{
         display: flex;
         flex-direction: column;
-        align-content: center;
-        box-shadow: 0rem -0.3rem 0.2rem 0rem darken($bg-color-location, 3%);
-        // border-top: 0.3rem solid darken($bg-color-location, 5%);
-        > .pgHome-location{
-            @include bgc-location();
-            padding: 1rem 0rem 1rem 1rem;
-            > .pgHome-form{
-                align-items: center; 
-                > .form-input{
-                    display: flex;
-                    flex-direction: row;   
-                    align-items: center;
-                    justify-content: center;
-                    gap: 0.8rem;
-                    > .input-i{
-                    }
-                    > .input{
-                        border: none;
-                        font-size: small;
-                        @include bgc-location;
-                        @include minWidth($value: 992px){
-                            font-size: medium;
+        > .pgHome-banner{
+            @include bgc();
+            padding-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            box-shadow: 0rem -0.3rem 0.2rem 0rem darken($bg-color-location, 3%);
+            // border-top: 0.3rem solid darken($bg-color-location, 5%);
+            > .pgHome-location{
+                @include bgc-location();
+                padding: 1rem 0rem 1rem 1rem;
+                > .pgHome-form{
+                    align-items: center; 
+                    > .form-input{
+                        display: flex;
+                        flex-direction: row;   
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.8rem;
+                        > .input-i{
+                        }
+                        > .input{
+                            border: none;
+                            font-size: small;
+                            @include bgc-location;
+                            @include minWidth($value: 992px){
+                                font-size: medium;
+                            }
                         }
                     }
                 }
             }
-        }
-        > .banner-message{
-            @include bgc();
-            padding: 2rem 0rem 0rem 0rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            > .message{
+            > .banner-message{
+                @include bgc();
+                padding: 2rem 0rem 0rem 0rem;
                 display: flex;
                 flex-direction: column;
-                gap: 0.7rem;
-                text-align: center;
-                padding: 0rem 3rem 0rem 3rem;
-                > .message-title{
-                    font-family: $text-headings-font-family;
-                    font-weight: 700;
-                    font-size: 1.5rem;
-                    line-height: 28px;
+                gap: 2rem;
+                > .message{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    text-align: center;
+                    padding: 0rem 3rem 0rem 3rem;
+                    > .message-title{
+                        font-family: $text-headings-font-family;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        line-height: 28px;
+                    }
+                    > .message-text{
+                        font-weight: 300;
+                        font-size: 1rem;
+                        line-height: 20px;
+                        color: #666666;
+                    }
                 }
-                > .message-text{
-                    font-weight: 300;
+                > .banner-btn{
+                    color: $btn-text-color;
                     font-size: 1rem;
-                    line-height: 20px;
-                    color: #666666;
-                }
+                    font-weight: 700;
+                    padding: 1rem 1rem 1rem 1rem;
+                    background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+                    border-radius: 3rem 3rem 3rem 3rem;
+                    border: none;
+                    align-self: center;
+                    text-align: center;
+                    &:hover{
+                        background: linear-gradient(145deg, lighten($color-secondary-1, 5%) 25%, lighten($color-primary, 5%) 75%);
+                        box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.65);
+                    }
+                }   
             }
-            > .banner-btn{
-                color: $btn-text-color;
-                font-size: 1rem;
-                font-weight: 700;
-                padding: 1rem 1rem 1rem 1rem;
-                background: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
-                box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
-                border-radius: 3rem 3rem 3rem 3rem;
-                border: none;
-                align-self: center;
-                text-align: center;
-                &:hover{
-                    background: linear-gradient(145deg, lighten($color-secondary-1, 5%) 25%, lighten($color-primary, 5%) 75%);
-                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.65);
-                }
-            }   
         }
-    }
-    > .pgHome-functions{
-        padding: 2rem 2rem 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        @include minWidth($value: 992px){
-            padding: 1rem 4.5rem 2rem 4.5rem;
-        }
-        > .functions-title{
-            font-family: $text-headings-font-family;
-            font-size: 24px;
-            font-style: bold;
-            font-weight: 700;
-        }
-        > .functions-container{
+        > .pgHome-functions{
+            padding: 2rem 2rem 4rem 2rem;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
             @include minWidth($value: 992px){
-                display: flex;
-                flex-direction: row;
-                gap: 1rem;
-                > .item{
-                    flex: 1;
-                }
+                padding: 1rem 4.5rem 2rem 4.5rem;
             }
-            > .item{
-                @include bgc();
-                display: flex;
-                flex-direction: row;
-                border-radius: 1rem;
-                box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.08);
-                padding: 1.2rem 0rem 1.2rem 0rem;
-                &:hover{
-                    @include hover(lighten($color-primary, 30%));
-                    >.icon{
-                        color: $color-primary;
-                    }
-                }
-                > .item-bg{
-                    position: absolute;
-                    text-align: center;
-                    margin: 0rem 0rem 0rem -0.5rem;
-                    padding: 0.1rem 0rem 0.1rem 0rem;
-                    @include bgc($color-primary);
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    border-radius: 1rem;
-                    > .item-order{
-                        color: $btn-text-color;
-                        text-align: center;
-                    }
-                }
-                > .icon {
-                    color: darken($bg-color-location, 40%);
-                    position: absolute;
-                    font-size: 1.2rem;
-                    align-self: center;
-                    padding-left: 2rem;   
-                }
-                p {
-                    align-self: center;
-                    margin-left: auto;
-                    margin-right: auto;
-                    font-family: $text-headings-font-family;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 1rem;
-                    line-height: 21px;  
-                }
+            > .functions-title{
+                font-family: $text-headings-font-family;
+                font-size: 24px;
+                font-style: bold;
+                font-weight: 700;
             }
-        }
-    }
-    > .pgHome-restaurants{
-        @include bgc();
-        padding: 3rem 2rem 3.5rem 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        @include minWidth($value: 992px){
-            padding: 1rem 4.5rem 2rem 4.5rem;
-        }
-        > .restaurants-title{
-            font-family: $text-headings-font-family;
-            font-size: 24px;
-            font-style: bold;
-            font-weight: 700;
-        }
-        > .restaurants-container{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2.2rem;
-            @include minWidth($value: 992px){
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 4rem;
-            }
-            > .resto{
+            > .functions-container{
                 display: flex;
                 flex-direction: column;
-                > .resto-img{
-                    aspect-ratio: 3/2;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 1rem;
-                    box-shadow: 0rem 1.8rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
-                    // @include size($width: 100%);   
-                }
-                > .resto-tag{
-                    width: 5rem;
-                    height: 2rem;
-                    background: $resto-tag-color;
+                gap: 1.5rem;
+                @include minWidth($value: 992px){
                     display: flex;
-                    align-content: center;
-                    align-items: center;
-                    margin: 0rem 1rem -3rem auto;
-                    z-index: 1; 
-                    > .tag-text{
-                        display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    > .item{
+                        flex: 1;
+                    }
+                }
+                > .item{
+                    @include bgc();
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 1rem;
+                    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.08);
+                    padding: 1.2rem 0rem 1.2rem 0rem;
+                    &:hover{
+                        @include hover(lighten($color-primary, 30%));
+                        >.icon{
+                            color: $color-primary;
+                        }
+                    }
+                    > .item-bg{
+                        position: absolute;
                         text-align: center;
+                        margin: 0rem 0rem 0rem -0.5rem;
+                        padding: 0.1rem 0rem 0.1rem 0rem;
+                        @include bgc($color-primary);
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        border-radius: 1rem;
+                        > .item-order{
+                            color: $btn-text-color;
+                            text-align: center;
+                        }
+                    }
+                    > .icon {
+                        color: darken($bg-color-location, 40%);
+                        position: absolute;
+                        font-size: 1.2rem;
+                        align-self: center;
+                        padding-left: 2rem;   
+                    }
+                    p {
+                        align-self: center;
                         margin-left: auto;
                         margin-right: auto;
-                        color: darken($color: $resto-tag-color, $amount: 40%);
-                        font-weight: 600;
-                        font-size: 0.9rem;
-                    }
-                }
-                > .resto-tag-transparent{
-                    width: 5rem;
-                    height: 2rem;
-                    display: flex;
-                    align-content: center;
-                    align-items: center;
-                    margin: 0rem 1rem -3rem auto;
-                    z-index: 1;
-                    background: none;
-                    > .tag-text{
-                        display: flex;
-                        text-align: center; 
-                    }
-                }
-                > .resto-info{
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    @include bgc($btn-text-color);
-                    padding: 1rem 1rem 1rem 1rem;
-                    border-radius: 0rem 0rem 1rem 1rem;
-                    margin-top: -3rem;
-                    > .info{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 0.2rem;
-                        > .info-caption{
-                            font-family: $text-headings-font-family;
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 1.1rem;
-                            line-height: 21px;   
-                            @include minWidth($value: 992px){
-                                font-size: 1rem;
-                            }
-                        }
-                        > .info-content{
-                            font-family: $text-headings-font-family;
-                            font-style: normal;
-                            font-weight: 300;
-                            font-size: 1rem;
-                            line-height: 19px;   
-                        }
-                    }
-                    > .heart{
-                        margin-left: auto;
-                        align-self: center;
-                        &::before{
-                        opacity: 1;
-                        }
-                        &:hover{
-                        cursor: pointer;
-                        transition: all .10s ease-in-out;
-                        -webkit-background-clip: text;
-                        font-weight: 900;
-                        background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
-                        -webkit-text-fill-color: transparent; 
-                        } 
-                        &:active{
-                        transition: all 60s fill;
-                        -webkit-background-clip: text;
-                        font-weight: 900;
-                        background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
-                        -webkit-text-fill-color: transparent; 
-                        } 
+                        font-family: $text-headings-font-family;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        line-height: 21px;  
                     }
                 }
             }
         }
+        > .pgHome-restaurants{
+            @include bgc();
+            padding: 3rem 2rem 3.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            @include minWidth($value: 992px){
+                padding: 1rem 4.5rem 2rem 4.5rem;
+            }
+            > .restaurants-title{
+                font-family: $text-headings-font-family;
+                font-size: 24px;
+                font-style: bold;
+                font-weight: 700;
+            }
+            > .restaurants-container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2.2rem;
+                @include minWidth($value: 992px){
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 4rem;
+                }
+                > .resto{
+                    display: flex;
+                    flex-direction: column;
+                    > .resto-img{
+                        aspect-ratio: 3/2;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                        box-shadow: 0rem 1.8rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+                        // @include size($width: 100%);   
+                    }
+                    > .resto-tag{
+                        width: 5rem;
+                        height: 2rem;
+                        background: $resto-tag-color;
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+                        margin: 0rem 1rem -3rem auto;
+                        z-index: 1; 
+                        > .tag-text{
+                            display: flex;
+                            text-align: center;
+                            margin-left: auto;
+                            margin-right: auto;
+                            color: darken($color: $resto-tag-color, $amount: 40%);
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        }
+                    }
+                    > .resto-tag-transparent{
+                        width: 5rem;
+                        height: 2rem;
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+                        margin: 0rem 1rem -3rem auto;
+                        z-index: 1;
+                        background: none;
+                        > .tag-text{
+                            display: flex;
+                            text-align: center; 
+                        }
+                    }
+                    > .resto-info{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        @include bgc($btn-text-color);
+                        padding: 1rem 1rem 1rem 1rem;
+                        border-radius: 0rem 0rem 1rem 1rem;
+                        margin-top: -3rem;
+                        > .info{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.2rem;
+                            > .info-caption{
+                                font-family: $text-headings-font-family;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 1.1rem;
+                                line-height: 21px;   
+                                @include minWidth($value: 992px){
+                                    font-size: 1rem;
+                                }
+                            }
+                            > .info-content{
+                                font-family: $text-headings-font-family;
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 1rem;
+                                line-height: 19px;   
+                            }
+                        }
+                        > .heart{
+                            margin-left: auto;
+                            align-self: center;
+                            &::before{
+                            opacity: 1;
+                            }
+                            &:hover{
+                            cursor: pointer;
+                            transition: all .10s ease-in-out;
+                            -webkit-background-clip: text;
+                            font-weight: 900;
+                            background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                            -webkit-text-fill-color: transparent; 
+                            } 
+                            &:active{
+                            transition: all 60s fill;
+                            -webkit-background-clip: text;
+                            font-weight: 900;
+                            background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+                            -webkit-text-fill-color: transparent; 
+                            } 
+                        }
+                    }
+                }
+            }
 
+        }
     }
+}
+@keyframes pageLoad {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+        }
 }

@@ -5,6 +5,7 @@
 @import "../abstracts/mixins";
 
 .loader{
+    margin: 0 auto;
     border: 10px solid white;
     border-radius: 50%;
     height: 10vmin;
@@ -12,10 +13,11 @@
     border-left-color: $color-primary;
     border-right-color: $color-secondary-1; 
     // animation-name: spin; 
-    // animation-duration: 1s;
+    // animation-duration: 1000ms;
     // animation-iteration-count: infinite;
     // animation-timing-function: linear;
-    animation: spin 1000ms infinite linear;
+    //animation-delay: 150ms;
+    animation: spin 1000ms 150ms infinite linear;
 }
 
 @keyframes spin {

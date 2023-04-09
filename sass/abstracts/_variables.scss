@@ -26,3 +26,7 @@ $nav-color-footer: #fff;
 $resto-tag-color: #99E2D0;   
 
 $color-gradient:linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
+
+$loader-dur: 1000ms;
+$loader-delay: 150ms;
+$page-delay: $loader-dur + $loader-delay;
