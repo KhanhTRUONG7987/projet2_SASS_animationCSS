@@ -96,7 +96,8 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 1.5rem; 
-                                animation: platDisplay 1000ms 300ms ease-out backwards;
+                                animation: platDisplay 1000ms ease-out backwards;
+                                @include delay(animation, 3, 2000ms);
                                 > .menu-title-group{
                                     > .menu-title{
                                         font-weight: 300;
@@ -113,7 +114,8 @@
                                     display: grid;
                                     grid-template-columns: repeat(1, 1fr);
                                     gap: 1rem;
-                                    animation: platDisplay 1000ms 300ms ease-out backwards;
+                                    animation: platDisplay 1000ms ease-out backwards;
+                                    @include delay(animation, 3, 0.5s);
                                     > .item{
                                         display: flex;
                                         flex-direction: row;
