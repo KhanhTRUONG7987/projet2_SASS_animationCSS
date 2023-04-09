@@ -1,20 +1,15 @@
-@import 'base/base';
 @import 'base/reset';
 @import 'base/typography';
 
-@import 'components/buttons';
 @import 'components/loader';
 
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/nav';
 
 @import 'pages/home';
 @import 'pages/menu';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-@import 'abstracts/functions';
-@import 'abstracts/placeholders';
 
 
