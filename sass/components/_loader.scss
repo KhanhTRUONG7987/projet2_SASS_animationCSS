@@ -13,6 +13,10 @@
     border-left-color: $color-primary;
     border-right-color: $color-secondary-1; 
     animation: spin $loader-dur 1 linear;
+    &__after{
+        content: " ";
+        opacity: 0; 
+    }
 }
 
 @keyframes spin {
