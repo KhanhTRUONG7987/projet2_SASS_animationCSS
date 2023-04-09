@@ -92,11 +92,11 @@
                             display: flex;
                             flex-direction: column;
                             gap: 3rem;
-                            // @include platDisplay (200ms, 4);
                             > .menu-element{
                                 display: flex;
                                 flex-direction: column;
                                 gap: 1.5rem; 
+                                animation: platDisplay 1000ms 300ms ease-out backwards;
                                 > .menu-title-group{
                                     > .menu-title{
                                         font-weight: 300;
@@ -125,10 +125,21 @@
                                         &:hover{
                                             gap: 0.5rem;
                                             > .chosen{
-                                                transition: margin 2000ms;
+                                                margin: -0.8rem -1rem 0rem 0rem;
+                                                background: $resto-tag-color;
+                                                transition: margin 1000ms;
                                                 > .fa-solid {
-                                                    
+                                                    color: $btn-text-color;
+                                                    background: $resto-tag-color;
+                                                    transform: rotate(0deg);
                                                 }
+                                                >.fa-circle-check{
+                                                    transform: rotate(360deg);
+                                                }
+                                            }
+                                            &::after{
+                                                margin: -0.8rem -4rem 0rem 0rem;
+                                                transition: margin 1000ms;
                                             }
                                         }
                                         > .plat-info{
@@ -165,20 +176,24 @@
                                         }
                                         > .chosen{
                                             width: 4rem;
-                                            height: 100%;
-                                            background: $resto-tag-color;
+                                            height: 158%;
+                                            background: transparent;
                                             display: flex;
                                             align-content: center;
                                             align-items: center;
-                                            margin-right: -5rem;
+                                            margin: -0.8rem -4rem 0rem 0rem;
                                             z-index: 1;
                                             border-radius: 0rem 1.2rem 1.2rem 0rem;
                                             > .fa-solid {
-                                                color: $btn-text-color;
-                                                background: $resto-tag-color;
+                                                color: transparent;
+                                                background: transparent;
                                                 align-self: center; 
                                                 margin-left: auto;
                                                 margin-right: auto;
+                                                transform: rotate(0deg);
+                                            }
+                                            >.fa-circle-check{
+                                                
                                             }
                                         }
                                     }

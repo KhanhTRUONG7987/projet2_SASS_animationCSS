@@ -5,9 +5,9 @@
 @import "../abstracts/mixins";
 
 .pgHome-wrapper{
-    margin-top: -75px;
+    margin-top: -55px;
     z-index: 1;
-    animation: pageLoad 1000ms $page-delay;
+    animation: pageLoad ease-in-out $page-delay;
     .pgHome-main{
         display: flex;
         flex-direction: column;
@@ -287,9 +287,11 @@
 }
 @keyframes pageLoad {
     0% {
-        transform: translateX(-9999px);
+        transform: scale(0);
+        opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: scale(1);
+        opacity: 1;
         }
 }
