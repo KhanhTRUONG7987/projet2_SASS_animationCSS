@@ -8,7 +8,7 @@
     > .pgResto-wrapper{
         display: flex;
         flex-direction: column;
-        > .pgResto-header{
+        > .header--resto{
             > .pgResto-header-icon{
                 position: relative;
                 float: left;
@@ -22,6 +22,7 @@
                 margin-right: auto;
             }
         }
+        
         > .pgResto-main{
             display: flex;
             flex-direction: column;
