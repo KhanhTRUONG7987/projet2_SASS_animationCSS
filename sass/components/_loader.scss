@@ -1,0 +1,28 @@
+//variables
+@import "../abstracts/variables";
+
+//mixins
+@import "../abstracts/mixins";
+
+.loader{
+    border: 10px solid white;
+    border-radius: 50%;
+    height: 10vmin;
+    width: 10vmin;
+    border-left-color: $color-primary;
+    border-right-color: $color-secondary-1; 
+    // animation-name: spin; 
+    // animation-duration: 1s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
+    animation: spin 1000ms infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

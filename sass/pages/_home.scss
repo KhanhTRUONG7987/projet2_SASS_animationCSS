@@ -30,7 +30,11 @@
                     }
                     > .input{
                         border: none;
+                        font-size: small;
                         @include bgc-location;
+                        @include minWidth($value: 992px){
+                            font-size: medium;
+                        }
                     }
                 }
             }
