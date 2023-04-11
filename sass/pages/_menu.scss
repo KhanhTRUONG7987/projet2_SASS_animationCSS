@@ -98,7 +98,7 @@
                                 flex-direction: column;
                                 gap: 1.5rem; 
                                 animation: platDisplay 1000ms ease-out backwards;
-                                @include delay(animation, 3, 2000ms);
+                                @include delay(animation, 2, 2000ms);
                                 > .menu-title-group{
                                     > .menu-title{
                                         font-weight: 300;
@@ -116,7 +116,7 @@
                                     grid-template-columns: repeat(1, 1fr);
                                     gap: 1rem;
                                     animation: platDisplay 1000ms ease-out backwards;
-                                    @include delay(animation, 3, 500ms);
+                                    @include delay(animation, 2, 500ms);
                                     > .item{
                                         display: flex;
                                         flex-direction: row;
@@ -128,9 +128,8 @@
                                         &:hover{
                                             gap: 0.5rem;
                                             > .chosen{
-                                                margin: -0.8rem -1rem 0rem 0rem;
                                                 background: $resto-tag-color;
-                                                transition: margin 1000ms;
+                                                transition: all 1000ms ease-in-out;
                                                 > .fa-solid {
                                                     color: $btn-text-color;
                                                     background: $resto-tag-color;
@@ -139,10 +138,6 @@
                                                 >.fa-circle-check{
                                                     animation: rotateCheck 500ms 1;
                                                 }
-                                            }
-                                            &::after{
-                                                margin: -0.8rem -4rem 0rem 0rem;
-                                                transition: margin 1000ms;
                                             }
                                         }
                                         > .plat-info{
