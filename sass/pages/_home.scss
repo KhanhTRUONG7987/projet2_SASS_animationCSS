@@ -264,14 +264,14 @@
                             &:hover{
                             cursor: pointer;
                             transition: all .10s ease-in-out;
-                            -webkit-background-clip: border-box;
+                            background-clip: border-box;
                             font-weight: 900;
                             background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
                             // -webkit-text-fill-color: transparent; 
                             } 
                             &:active{
                             transition: all 60s fill;
-                            -webkit-background-clip: text;
+                            background-clip: text;
                             font-weight: 900;
                             background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
                             -webkit-text-fill-color: transparent; 

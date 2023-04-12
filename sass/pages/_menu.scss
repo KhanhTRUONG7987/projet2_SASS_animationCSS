@@ -75,14 +75,14 @@
                                &:hover{
                                 cursor: pointer;
                                 transition: all .8s ease-in-out;
-                                -webkit-background-clip: text;
+                                background-clip: text;
                                 font-weight: 900;
                                 background-image: linear-gradient(85deg, $color-secondary-1 3%, $color-primary 97%);
                                 -webkit-text-fill-color: transparent; 
                                 } 
                                 &::after{
                                 transition: all 1s fill;
-                                -webkit-background-clip: text;
+                                background-clip: text;
                                 font-weight: 900;
                                 background-image: linear-gradient(85deg, $color-secondary-1 3%, $color-primary 97%);
                                 -webkit-text-fill-color: transparent; 
