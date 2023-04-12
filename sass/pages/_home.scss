@@ -96,7 +96,7 @@
             > .functions-title{
                 font-family: $text-headings-font-family;
                 font-size: 24px;
-                font-style: bold;
+                font-style:normal;
                 font-weight: 700;
             }
             > .functions-container{
@@ -170,7 +170,7 @@
             > .restaurants-title{
                 font-family: $text-headings-font-family;
                 font-size: 24px;
-                font-style: bold;
+                font-style:normal;
                 font-weight: 700;
             }
             > .restaurants-container{
@@ -270,7 +270,7 @@
                             // -webkit-text-fill-color: transparent; 
                             } 
                             &:active{
-                            transition: all 60s fill;
+                            transition: all 60s;
                             background-clip: text;
                             font-weight: 900;
                             background-image: linear-gradient(145deg, $color-secondary-1 25%, $color-primary 75%);
