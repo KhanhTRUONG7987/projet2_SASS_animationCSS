@@ -97,8 +97,8 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 1.5rem; 
-                                animation: platDisplay 1000ms ease-out backwards;
-                                @include delay(animation, 2, 2000ms);
+                                animation: platDisplay 500ms ease-out backwards;
+                                @include delay(animation, 2, 1000ms);
                                 > .menu-title-group{
                                     > .menu-title{
                                         font-weight: 300;
@@ -128,8 +128,9 @@
                                         &:hover{
                                             gap: 0.5rem;
                                             > .chosen{
+                                                margin: -0.8rem -1rem 0rem 0rem;
                                                 background: $resto-tag-color;
-                                                transition: all 1000ms ease-in-out;
+                                                transition: margin 1000ms ease-in-out;
                                                 > .fa-solid {
                                                     color: $btn-text-color;
                                                     background: $resto-tag-color;
