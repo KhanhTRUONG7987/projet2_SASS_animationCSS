@@ -98,7 +98,7 @@
                                 flex-direction: column;
                                 gap: 1.5rem; 
                                 animation: platDisplay 800ms ease-in-out backwards;
-                                @include delay(animation, 3, 800ms);
+                                @include delay(animation, 3, 1000ms);
                                 > .menu-title-group{
                                     > .menu-title{
                                         font-weight: 300;
